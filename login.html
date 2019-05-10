@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <meta http-equiv="Accept" content="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8">
+    <title>登录页面</title>
+    <link rel="stylesheet" type="text/css" href="login.css" />
+    <script type="text/javascript" src="login.js"></script>
+    <script type="text/javascript" src="md5.js"></script>
+</head>
+
+<body>
+    <div id="login_frame">
+    
+        <p id="image_logo"><img src="1551925192449.jpeg" width="20%"></p><!-- 标题图标-->
+
+        <form id="login_form">
+
+            <p><label class="label_input">用户名</label><input type="text" name="Only_Number" id="username" 
+                class="text_field"
+                onkeyup="value=value.replace(/[^\d]/g,'')"//输入时校验       
+                onblur="value=value.replace(/[^\d]/g,'')"//失去焦点时校验
+                ng-model="schedule.round"
+                placeholder="请输入数字"
+                autocomplete="on" /></p>
+            <p><label class="label_input
+                ">密码</label><input type="password" id="password" class="text_field" maxlength="16" placeholder="请输入登录密码"
+                    autocomplete="off" /></p>
+
+            <div id="login_control">
+
+                <br/>
+
+                <input type="button" id="btn_login" value="登录" onclick="login()">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
